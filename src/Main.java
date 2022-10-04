@@ -3,13 +3,14 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        int m = in.nextInt();
-        int n =0;
-        int i =1;
-        while (m>0){
-            n = n*10;
-            n = n + m%10;
-            m=m/10;
+        int[] bruh = new int[10];
+        int n =1_000_000;
+        for(int i =0;i < bruh.length;++i){
+            int k = in.nextInt();
+            bruh[i]=k;
+            if ((bruh[i] < n) && (bruh[i] >0)){
+                n=bruh[i];
+            }
         }
         System.out.println(n);
     }
